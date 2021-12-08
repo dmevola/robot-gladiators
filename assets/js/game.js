@@ -69,7 +69,11 @@ var fight = function(enemyName) {
 
 
   
-
+var startGame = function() {
+  // reset player stats
+  playerHealth = 100;
+  playerAttack = 10;
+  playerMoney = 10;
 // run fight function to start game
 for(var i = 0; i < enemyNames.length; i++) {
     if (playerHealth > 0) {
@@ -93,3 +97,9 @@ for(var i = 0; i < enemyNames.length; i++) {
           break;
       }
 }
+//play again
+startGame();
+};
+
+// start the game when page loads
+startGame();
